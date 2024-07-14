@@ -1,0 +1,29 @@
+body{
+    background: #73aaf3;
+    
+}
+.container{
+    background: #73a;
+    align-items: center;
+    //text-align: center;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    .row{
+        
+        left: 15px;
+        padding:25;
+        height: 300px;
+        width: 400px;
+        background: #f28846;
+        margin: 0 auto; //definiendo la alineacion del div
+    }
+    .col{
+        background: #15c1e87d;
+        align-items: center;
+        padding: 25px;
+        width: 200px;
+        text-align: center;
+        margin: 25px auto;
+    }
+}

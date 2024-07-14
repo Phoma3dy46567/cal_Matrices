@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <title>Creando Puzzle</title>
+
+    <link rel="stylesheet" href="/../inicio_2/animacion/proyecto_1roA/puzzle/juego-puzzle.css">
+    
+</head>
+<body>
+    <section>
+        
+            <h1>PUZZLE CREANDO</h1>
+            <h3>MI JUEGO DE PUZZLE, EN CUANTOS MOVIMIENTOS LA SOLUCIONAS</h3>
+            <div class="counterMove">
+                <div class="nombre">
+                    movimientos
+                </div>
+                <div class="valor" id="valorMove">
+                    0
+                </div>
+                <button id="btnreiniciar" class="reiniciar" onclick="shuffleMatrix()">REINICIAR</button>
+                <div class="nombre">
+                    nivel
+                </div>
+                <div class="valor" id="nivel">
+                    0
+                </div>
+            </div>
+        <div class="principal">    
+            
+            <div class="board">
+                <!-- este es la parte donde esta el puzzle -->
+            </div>
+        </div>
+    </section>
+    
+    <script src="/../inicio_2/animacion/proyecto_1roA/puzzle/juego-puzzle.js"></script>
+</body>
+</html>

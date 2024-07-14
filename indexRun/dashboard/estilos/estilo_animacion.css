@@ -1,0 +1,241 @@
+html {
+  height: 615px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(244, 244, 246, 0.316),
+      rgba(243, 244, 246, 0.23)
+    ),
+    url(/../creando/indexRun/imagenes/binito.gif);
+  background-repeat: no-repeat, center;
+  background-size: 100% 100%;
+  flex-wrap: wrap;
+  position: fixed;
+}
+
+/*
+    OTRA FORMA DE HACER OPACIDAD Y DEGRADADO
+body::before{
+    content: "";
+    width: 100%;
+    min-height: 10vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(40, 239, 5, 0.599),rgba(231, 3, 3, 0.547));
+}*/
+.cabecera {
+  padding-left: 5%;
+  align-items: center;
+  height: 100px;
+}
+
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 27, 76, 0.6) 10%,
+    rgba(6, 143, 1, 0.3607843137) 30%,
+    rgba(2, 116, 107, 0.431372549) 100%
+  );
+  align-items: center;
+  height: 70px;
+  width: 1100px;
+  text-align: center;
+  line-height: 70px;
+  color: rgb(2, 7, 69);
+}
+
+header ul li img {
+  padding: 0;
+  height: 60px;
+  width: 80px;
+  align-content: center;
+  border-radius: 15px;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  margin: 0px 10px 20px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+header ul li {
+  list-style: none;
+  margin: 0px 10px -10px 10px;
+  height: 3px;
+  width: auto;
+}
+header ul a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 18px;
+  font-family: "Popins", sans-serif;
+  color: rgba(236, 236, 242, 0.818);
+  text-transform: uppercase;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+li .cajas {
+  background: rgba(172, 255, 47, 0.803);
+  height: 3px;
+  width: auto10px;
+  align-items: flex-start;
+  border: 5px;
+  margin-top: 0px;
+  border-color: #000;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+/*ul:hover{
+    li a{
+        transform: scale(1.5);
+        //opacity: .6;
+        filter: blur(5px);
+        img{
+            position: static;
+        }
+}
+}*/
+header ul li a:hover {
+  background: rgba(186, 210, 4, 0.513);
+  color: rgb(0, 8, 255);
+  height: 60px;
+  transform: scale(1.1);
+  opacity: 0.9;
+  filter: blur(0px);
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(227, 229, 229);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+section {
+  display: flex;
+  background: rgba(30, 2, 74, 0.444);
+  margin: 0 auto;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  height: 350px;
+  width: 800px;
+  flex-direction: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+section .text {
+  left: 15px;
+  padding: 25;
+  height: 300px;
+  width: 250px;
+  background: rgba(19, 5, 29, 0.3725490196);
+  margin: 15px 25px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+section .text p {
+  color: rgb(171, 247, 248);
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+}
+section .text img {
+  height: 315px;
+  width: 520px;
+}
+
+.imagen .dentro {
+  position: relative;
+  background: rgb(170, 136, 136);
+  height: 300px;
+  width: 230;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.imagen .dentro img {
+  position: absolute;
+  height: 300px;
+  width: 230;
+}
+
+img:hover {
+  transform: scale(1.2);
+  transition: all 0.7s;
+}
+
+img {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+footer {
+  padding: 0;
+  background: #000;
+  color: aquamarine;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  align-self: flex-end;
+  height: 5px;
+  font-size: 1px;
+}
+footer marquee {
+  padding: 0;
+  font-size: medium;
+  background: rgba(44, 43, 43, 0.416);
+}
+footer p {
+  padding: 0 20px;
+  margin: 0px;
+}
+
+.pie {
+  display: flex;
+  float: right;
+  align-items: center;
+}
+.pie img {
+  align-items: left;
+  height: 8px;
+  width: 8px;
+  padding: 0 25px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+footer:hover {
+  background: rgba(149, 148, 148, 0.393);
+  height: 60px;
+  font-size: 20px;
+}
+footer:hover img {
+  height: 40px;
+  width: 45px;
+} /*# sourceMappingURL=estilo_animacion.css.map */

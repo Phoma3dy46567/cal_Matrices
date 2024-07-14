@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+   <title>nuevo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="../proyecto_1roA/css/iniciar_index.css">
+</head>
+
+</style>
+<body>
+
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+  <a href="#" class="enlace">
+    <img src="../proyecto_1roA/img/LOGO_5.png" alt="logo" class="logo" style="height: 50;">
+  </a>
+  <ul>
+    <li id="selecMenu1"><button class="navbar1" onclick="mostrarInicio()" id="btnMenuNavbar1">inicio</button></li>
+    <li id="selecMenu2"><button class="navbar1" onclick="sumaresta()" id="btnMenuNavbar2">suma y resta</button></li>
+    <li id="selecMenu3"><button class="navbar1" onclick="mostrarMultiplicacion()" id="btnMenuNavbar3">m. multiplicacion</button></li>
+    <li id="selecMenu4"><button class="navbar1" onclick="mostrarDeterminante()" id="btnMenuNavbar4">m. determinante</button></li>
+    <li id="selecMenu5"><button class="navbar1" onclick="mostrarTranspuesta()" id="btnMenuNavbar5">m. transpuesta</button></li>
+    <li id="selecMenu6"><button class="navbar1" onclick="mostrarInversa()" id="btnMenuNavbar6">m. inversa</button></li>
+    <li><a href="/../Register/inicio_2/animacion/animar_letras.php"><button class="navbar1" id="btnMenuNavbar">ATRAS</button></a></li>
+    
+  </ul>
+</nav>
+<!--****************ESTE ES LA SECCION PARA GENERAR TODOS LOS EJERCICIOS*********-->
+<section class="section_principal" id="sumaResta" name="sectionPrincipal">
+  <div class="inicioprincipal" id="inicioPrincipal">
+    <div class="contenido">
+      <br><br><h2><strong>INTRODUCCIÓN</strong></h2><br>
+      
+      <h4><strong>QUE SON LAS MATRICES</strong></h4><br>
+    <p>
+          <!--<pre>-->
+En este artículo vamos a ver qué es una matriz en matemática, cómo se define, qué tipos de matrices hay y vamos a ver ejemplos de matrices.<br><br>
+
+Una matriz es un arreglo de números ordenado, que consiste en una serie de filas y columnas, de modo que cada 
+elemento ocupa una posición y puede ser identificado por su número de fila y de columna.<br><br>
+
+Dadas dos matrices podremos realizar ciertas operaciones entre ellas siempre que cumplan determinadas condiciones.<br><br>
+
+Una de las aplicaciones mas útiles de las matrices es la resolución de sistemas de ecuaciones. Por ejemplo, si
+tenemos un sistema de dos ecuaciones con dos incógnitas, podemos representar este sistema con una matriz cuadrada
+de 2×2 (llamémosla A), multiplicada por un vector columna de incógnitas (vector x) y ese producto igualarlo al
+vector columna de términos independientes (digamos B). Este sistema se representaría de la siguiente manera:<br>
+
+<strong>A.x = B</strong><br><br>
+
+Lo cual recuerda mucho a una ecuación lineal simple en la que tenemos una incógnita (x) que está multiplicada por
+un coeficiente (A) y esto es igual a un valor (B), para resolver esa ecuación lineal basta con dividir a ambos
+miembros por el coeficiente A y de esta forma despejaríamos la incógnita x. No se puede hacer divisiones con
+matrices pero se puede recurrir a una operación análoga que es multiplicar ambos miembros por la matriz inversa de
+A (siempre que exista la matriz inversa de A), con esto se despeja el vector incógnita.<br>
+
+<strong>x = A-1.B</strong><br><br>
+<strong>Definición de una Matriz en Matemática:</strong><br><br>
+
+Una matriz la representamos con una letra del alfabeto en mayúscula (por ejemplo A, B, C…), luego podemos explicitar
+sus elementos, para ello vamos a escribir sus números en una tabla que contendrá una determinada cantidad de filas 
+y columnas.<br><br>
+
+En la figura 1 vemos un ejemplo de una matriz genérica A de m filas y n columnas, vemos que en la derecha de la 
+igualdad se ha explicitado la matriz escribiendo sus elementos aij.<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/matriz-generica-en-matematica.webp" alt="ejemplo_de_matriz">
+<br>
+una matriz A genérica de m filas y n columnas en la que se explicitan sus elementos aijFig. 1: Matriz A genérica 
+de mfilas y n columnas, a la derecha se muestran sus elementos aij.<br><br>
+
+La matriz de la figura 1 hace referencia a una matriz cualquiera, se suele utilizar para las definiciones y 
+propiedades de las matrices.<br><br>
+
+Ejemplos de matrices con valores<br><br>
+
+Vamos a ver ejemplos de matrices que tienen características particulares ya sea por su tamaño o por la forma en la 
+que están distruibuidos sus elementos.<br><br>
+<strong>Matriz Cuadrada</strong><br><br>
+
+Una matriz cuadrada es una matriz en la que el número de filas coincide con el número de columnas. <br><br>
+En la figura 2 vemos un ejemplo de una matriz B de 3 filas y 3 columnas.<br><br>
+
+matriz B de 3 filas y 3 columnas en la que se explicitan sus elementos bij<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/ejemplo-de-una-matriz-b-de-3-por-3.webp" alt="ejemplo_de_matriz_cuadrada">
+<br>
+Ejemplo de una matriz B de 3 filas y 3 columnas, a la derecha se muestran sus elementos bij.<br><br>
+
+En una matriz cuadrada tenemos una diagonal principal que son los elementos bij para los cuales i=j, en el caso de
+la figura 2 son los elementos b11, b22 y b33 cuyos valores son 1, 0 y 2 respectivamente.<br><br>
+
+La diagonal principal divide a la matriz en dos partes, un triángulo superior y un triángulo inferior.<br><br>
+<strong>Matriz Diagonal</strong><br><br>
+
+Una matriz diagonal es una matriz en la que todos sus elementos no nulos están ubicados en la diagonal principal 
+y el resto de los elementos son 0. En las figuras 3 y 4 vemos ejemplos de matrices diagonal, en particular la matriz
+de la figura 4 se la conoce como matriz identidad.<br><br>
+ejemplo de una matriz diagonal de 3x3, todos sus elementos no nulos están en la diagonal principal<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/ejemplo-de-una-matriz-diagonal.webp" alt="eplemplo_matriz_diagonal">
+<br>
+Ejemplo de una matriz A diagonal de 3×3.<br><br>
+identidad de 3x3, todos sus elementos no nulos están en la diagonal principal y valen 1<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/ejemplo-de-una-matriz-diagonal.webp" alt="ejemplo_matriz_diagonal">
+<br>
+Matriz identidad de 3×3.<br><br>
+<strong>Matriz Triangular</strong>
+<br><br>
+Una matriz triangular es una matriz que tiene todos sus elementos no nulos de un lado de la diagonal principal y
+el resto de los elementos son 0. Podemos tener matrices triangular superior y matrices triangular inferior, como se 
+observa en las figuras 5 y 6 respectivamente.<br><br>
+ejemplo de una matriz triangular superior de 3x3, todos sus elementos no nulos están en la diagonal principal
+y por encima<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/ejemplo-de-una-matriz-triangular-superior.webp" alt="ejemplo_matriz">
+<br>
+Ejemplo de una matriz A de 3×3 triangular superior.<br><br>
+ejemplo de una matriz triangular inferior de 3x3, todos sus elementos no nulos están en la diagonal principal
+y por debajo<br><br>
+<img src="https://gamedevtraum.com/wp-content/uploads/es/matematica/algebra/que-es-una-matriz-en-matematica-definicion-y-ejemplos/ejemplo-de-una-matriz-triangular-superior.webp" alt="ejemplo_matiz_triangular">
+<br>
+Ejemplo de una matriz A de 3×3 triangular inferior.<br><br>
+<strong>Conclusión</strong>
+<br><br>
+Una matriz en matemática es una arreglo de números ordenados en una cantidad fija de filas y columnas.<br><br>
+Las matrices cuadradas son las matrices en las que el número de fila coincide con el número de columnas. En una
+matriz cuadrada tenemos una diagonal principal que es el elemento en el cual el número de fila coincide con el
+número de columna.<br><br>
+Una matriz diagonal es una matriz cuadrada en la que todos sus elementos no nulos se encuentran en la diagonal
+principal. Particularmente la matriz identidad es una matriz diagonal en la que todos los elementos valen 1.<br><br>
+Las matrices triangulares son aquellas en la que todos los elementos no nulos se encuentran en la diagonal
+principal y por encima o por debajo, de aquí las podemos clasificar en matriz triangular superior o inferior.<br><br>
+En JavaScript, los arreglos (matrices) comienzan a partir del índice cero y pueden ser manipulados con varios métodos.<br>
+
+Un arreglo (matriz) en JavaScript se ve de esta forma:<br>
+</p>
+
+<div class="ejemplo">
+  var myArray = [1, 2, 3, 4];<br><br>
+
+    var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];<br><br>
+    </div>
+    <p>
+    Los arreglos en Javascript pueden guardar distintos tipos de datos como se muestra anteriormente<br>
+    </p>
+
+      <p> 
+          puedes conocer más sobre matrices (array)<br>
+          sique aprendiendo... 
+          <a href="https://es.wikipedia.org/wiki/Array_data_structure" class="external" target="_blank">ARRAY </a>  en Wikipedia<br><br>
+
+      </p>
+    </div>
+  </div>
+  
+  <!--****************ESTE ES EL CUERPO DE LA SUMA DE MATRICES*********-->
+  
+  <div class="container" id="cuerpo" style="display: none;">
+    <div class="row" id="cuerpo">
+      <div class="col-1">
+        <h4>SUMA Y RESTA DE MATRICES</h4>
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body">
+            <h5 class="card-title">Ingrese el tamaño de la matriz:</h5>
+            <p class="card-text">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3/3467.png" alt="" width="25" height="25"></span>
+                <input type="number" id="txt1" class="form-control" placeholder="valor" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+              <!--
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><img src="https://st.depositphotos.com/1000507/54534/v/450/depositphotos_545349872-stock-illustration-three-column-vertical-strips-bars.jpg" alt="" width="28" height="30"></span>
+                <input type="number" id="txt2" class="form-control" placeholder="columnas" aria-label="Username" aria-describedby="basic-addon1" width="25px">
+              </div>-->
+            </p>
+            <button class="btn" id="generaB">Generar matriz</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body" id="curTabla">
+            <button class="btn btn-primary" id="llenarRamdomSumRes" style=" width:auto; height:auto; font-size: 12px; padding:2; background:#296b05d7;">matriz Random</button>
+            <div class="grupo">
+              <div class="table" id="idCuerpo">
+                <!--en esta parte se crea las tablas-->
+              </div>
+
+              <div class="table" id="idCuerpo2">
+                <!--en esta parte se crea las tablas-->
+              </div>
+            </div>
+            
+
+            <div class="botones2">
+              <h5 class="card-title">realizar las operaciones:</h5>
+              <!--<button class="btn btn-primary" id="sumaM">sumar</button>-->
+              <button class="btn btn-primary" id="SumaMat">sumaMat</button>
+              <button class="btn btn-primary" id="restaMat">restar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <p>La matriz resultado es: </p>
+          <div class="card-body">
+            <div class="grupo">
+              <div class="table" id="idResSuma">
+                <!--en esta parte se crea las tablas-->
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--**********ESTE ES LA SECCION DE LA MULTIPLICACION************-->
+ 
+  <div class="container" id="cuerpoMul" style="display: none;">
+    <div class="row" id="cuerpoMul">
+      <div class="col-1">
+        <h4>MULTIPLICAR MATRIZ</h4>
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body">
+            <h5 class="card-title">Ingrese los tamaños de la matriz:</h5>
+            <p class="card-text">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3603/3603323.png" alt="" width="25" height="25"></span>
+                <input type="number" id="fila" class="form-control" placeholder="filas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+              
+              <div class="input-group mb-3">
+                <p >filas igual a columnas</p>
+                <span class="input-group-text" id="basic-addon1"><img src="https://w7.pngwing.com/pngs/421/447/png-transparent-matrix-neo-people-icon-miscellaneous-angle-text.png" alt="" width="24" height="28"></span>
+                <input type="number" id="filaColum" class="form-control" placeholder="fil-col" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/56/56838.png" alt="" width="24" height="28"></span>
+                <input type="number" id="colum" class="form-control" placeholder="columnas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+            </p>
+            <button class="btn" id="generarMulti">Generar matriz</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <button class="btn btn-primary" id="llenarRamdomMulti" style=" width:auto; height:auto; font-size: 12px; padding: 2px; background:#296b05d7;">matriz Random</button>
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body" id="curTabla">
+            <div class="grupo">
+              <div class="table" id="idMultiMatriz1">
+                  <!--en esta parte se crea las tablas-->
+              </div>
+
+              <div class="table" id="idMultiMatriz2">
+                <!--en esta parte se crea las tablas-->
+              </div>
+            </div>
+           
+
+            <div class="botones2">
+              <h5 class="card-title">realizar las operaciones:</h5>
+              <!--<button class="btn btn-primary" id="sumaM">sumar</button>-->
+              <button class="btn btn-primary" id="resMultiMat1">multiplicar</button>
+<!--               <button class="btn btn-primary" id="resMultiMat2">multiplicar</button>
+ -->            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <p>El resulrado de la multiplicacion es:</p>
+          <div class="card-body">
+            <div class="grupo">
+              <div class="table" id="idResulMulti">
+                <!--en esta parte se crea las tablas resultado-->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+   <!--**********ESTE ES LA SECCION DE LA MATRIZ DETERMINANTE************-->
+
+   <div class="container" id="cuerpoDeterminant" style="display: none;">
+    <div class="row" id="cuerpoDeterm2">
+      <div class="col-1">
+        <h4>MATRIZ DETERMINANTE</h4>
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body">
+            <h5 class="card-title">Ingrese el tamaño de la matriz:</h5>
+            <p class="card-text">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3/3467.png" alt="" width="25" height="25"></span>
+                <input type="number" id="inputDetermin" class="form-control" placeholder="valor" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+
+            </p>
+            <button class="btn" id="generarDeterminate">Generar matriz</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <button class="btn btn-primary" id="llenarRamdomDeter" style=" width:auto; font-size: 12px; padding:0; background:#296b05d7;">matriz Random</button>
+          <h><br>matriz determinante es: </h>
+          <div class="card-body" id="curTabla">
+            <div class="grupo">
+              <div class="table" id="creaMatrizDeterm">
+                <!--en esta parte se crea las tablas-->
+              </div>
+              
+            </div>
+            <div class="botones2">
+              <h5 class="card-title">realizar operacion:</h5>
+              <button class="btn btn-primary" id="matDeterm">determinante</button>
+              <!-- <button class="btn btn-primary" id="restaMat">restar</button> -->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <div class="card-body">
+            <div class="grupo">
+              <div class="table" id="matIncrementofilas">
+                <!--en esta parte se crea las tablas-->
+              </div>
+              <div class="table" id="ResultadomatrizDet">
+                <!-- en esta parte se crea las tablas -->
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--**********ESTE ES LA SECCION DE LA MATRIZ TRANSPUESTA************-->
+
+    <div class="container" id="cuerpoTranspuesta" style="display: none;">
+      <div class="row" id="cuerpoTranspuesta">
+        <div class="col-1">
+          <h4>MATRIZ TRANPUESTA</h4>
+          <div class="card" style=" margin-top: 20px;">
+            <!--<img src="..." class="card-img-top" alt="...">-->
+            <div class="card-body">
+              <h5 class="card-title">Ingrese el tamaño de la matriz:</h5>
+              <p class="card-text">
+
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3603/3603323.png" alt="" width="25" height="25"></span>
+                  <input type="number" id="filaTrans" class="form-control" placeholder="filas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+                </div>
+                
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/56/56838.png" alt="" width="24" height="28"></span>
+                  <input type="number" id="columTrans" class="form-control" placeholder="columnas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+                </div>
+
+              </p>
+              <button class="btn" id="generarMatTrans">Generar matriz</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card" style=" margin-top: 20px;">
+            <button class="btn btn-primary" id="llenarRamdomtransp" style=" width:auto; height:auto; font-size: 12px; padding: 2px; background:#296b05d7;">matriz Random</button>
+            <!--<img src="..." class="card-img-top" alt="...">-->
+            <div class="card-body" id="curTabla">
+              <div class="grupo">
+                <div class="table" id="idMatrizTrans">
+                    <!--en esta parte se crea las tablas-->
+                </div>
+              </div>
+            
+              <div class="botones2">
+                <h5 class="card-title">generar la matriz transpuesta:</h5>
+                <!--<button class="btn btn-primary" id="sumaM">sumar</button>-->
+                <button class="btn btn-primary" id="generMatzTrans">tranpuesta</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card" style=" margin-top: 20px;">
+            <!--<img src="..." class="card-img-top" alt="...">-->
+            <p>la matriz transpuesta es:</p>
+            <div class="card-body">
+              <div class="grupo">
+                <div class="table" id="idResultTrans">
+                  <!--en esta parte se crea las tablas resultado-->
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   <!--**********ESTE ES LA SECCION DE LA MATRIZ INVERSA************-->
+<div class="matzinversa" id="matzz_inversa" style="display: none;">
+   <div class="container" id="cuerpoInversa">
+    <div class="row" id="cuerpoInversa" >
+      <div class="col-1">
+        <h4>MATRIZ INVERSA</h4>
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body">
+            <h5 class="card-title">Ingrese el tamaño de la matriz:</h5>
+            <p class="card-text">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3/3467.png" alt="" width="25" height="25"></span>
+                <input type="number" id="inputInversa" class="form-control" placeholder="valor" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+
+            </p>
+            <button class="btn" id="generarinversa">Generar matriz</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <button class="btn btn-primary" id="llenarRamdomInversa" style=" width:auto; font-size: 12px; padding:0; background:#296b05d7;">matriz Random</button>
+          <h><br>matriz inversa es: </h>
+          <div class="card-body" id="curTabla">
+            <div class="grupo">
+              <div class="table" id="creaMatrizinversa">
+                <!--en esta parte se crea las tablas-->
+              </div>
+
+              <div class="table" id="creaMatrizinversaIdent">
+                <!--en esta parte se crea las tablas-->
+              </div>
+              
+            </div>
+              <div class="botones2">
+                <h5 class="card-title">realizar la operacion:</h5>
+                <button class="btn btn-primary" id="matrzInversa">determinante</button>
+              <!-- <button class="btn btn-primary" id="restaMat">restar</button> -->
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <h5 class="card-title">creamos la matriz con <br>la matriz identidad</h5>
+          <div class="card-body">
+            <div class="grupo" style="display: flex; flex-direction:column;">
+              <div class="table" id="preResult1">
+                <!--en esta parte se crea las tablas CON LA MATRIZ IDENTIDA-->
+              </div>
+              <button class="btn btn-primary" id="sigResultInversa" style="width: 115px;">resolver</button>
+              <div class="table" id="preResult2">
+                <!-- en esta parte se crea las tablas -->
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <div class="card-body">
+            <div class="grupo">
+              <div class="table" id="matrzResul1">
+                <!--en esta parte se crea las tablas--
+              </div>
+              <div class="table" id="matrzResul2">
+                <!-- en esta parte se crea las tablas --
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container" id="cuerpoinversa_2">
+    <div class="row" id="cuerpoinversa_2">
+      <!-- <div class="col-1">
+        <h4>MATRIZ TRANPUESTA</h4>
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">--
+          <div class="card-body">
+            <h5 class="card-title">Ingrese numero el tamaño de la matriz:</h5>
+            <p class="card-text">
+
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/3603/3603323.png" alt="" width="25" height="25"></span>
+                <input type="number" id="filaTrans" class="form-control" placeholder="filas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+              
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><img src="https://cdn-icons-png.flaticon.com/512/56/56838.png" alt="" width="24" height="28"></span>
+                <input type="number" id="columTrans" class="form-control" placeholder="columnas" aria-label="Username" aria-describedby="basic-addon1" style="width: 4rem; height: 2rem; margin-top: 20px; font-size:larger">
+              </div>
+
+            </p>
+            <button class="btn" id="generarMatTrans">Generar matriz</button>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <h5 class="card-title">aqui esta la matriz inversa</h5>
+          <!--<button class="btn btn-primary" id="llenarRamdomtransp" style=" width:auto; height:auto; font-size: 12px; padding: 2px; background:#419414d7;">matriz Random</button>
+          <img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body" id="curTabla">
+            <div class="grupo">
+              <div class="table" id="result_matzInversa3">
+                  <!--en esta parte se crea las tablas-->
+              </div>
+            </div>
+            <!--<div class="botones2">
+              <button class="btn btn-primary" id="sumaM">sumar</button>
+              <button class="btn btn-primary" id="generMatzTrans">tranpuesta</button>
+            </div>-->
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card" style=" margin-top: 20px;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+          <p>la matriz transpuesta es:</p>
+          <div class="card-body">
+            <div class="grupo">
+              <div class="table" id="idResultTrans">
+                <!--en esta parte se crea las tablas resultado-->
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</section>
+  <div class="barra_foorter">
+    <footer>
+      <div class="section">
+        <marquee behavior="" direction="left">P => S => A == R   🎞⚡  LOS PENSAMIENTOS LLEVAN A LOS SENTIMIENTOS, LOS SENTIMIENTOS LLEVAN A LAS ACCIONES Y  LAS ACCIONES LLEVAN A LOS RESULTADOS</marquee>
+        
+      </div>
+    </footer>
+  </div>
+
+      <!-- <main class="form-signin w-100 m-auto" id="inicioSesion">
+        <form id="inicio">
+          <img class="mb-4" src="img/boliviamar.png" alt="" width="202" height="187">
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+      
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        </form>
+      </main> -->
+
+    <script src="js/otra.js"></script>
+
+    <!-- <script src="js/funtions.js"></script> -->
+</body>
+</html>

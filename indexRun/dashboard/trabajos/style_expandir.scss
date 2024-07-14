@@ -1,0 +1,259 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}  
+
+body{
+    background: rgba(3, 105, 114, 0.6);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    //background: linear-gradient(135deg, #6fca84, #77dad5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+//CABECERA DE LA PAGINA
+
+.cabecera{
+
+    padding-left: 5%;
+    //padding-right: 5%;
+    align-items: center;
+    height: 100px;
+}    
+header{
+    background: linear-gradient(90deg, #021b4c99 10%, #068f015c 30%, #02746b6e 100%);
+    align-items: center;
+    height: 70px;
+    width: 1100px;
+    text-align: center;
+    line-height: 70px;
+    color: rgb(2, 7, 69);  
+    //position:fixed;
+}
+header ul li img{
+    padding: 0;
+    height: 60px;
+    width: 80px;
+    align-content: center;
+    border-radius: 15px;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    margin: 0px 10px 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    li{
+        list-style: none;
+        margin: 0px 10px -10px 10px;
+        height: 3px;
+        width: auto;    
+    }
+    a{
+        display: block;
+        position: relative;
+        text-decoration: none;
+        padding: 5px;
+        font-size: 18px;
+        font-family: "Popins", sans-serif;
+        color: rgba(236, 236, 242, 0.818);
+        text-transform: uppercase;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+}
+}
+li .cajas{
+    background: rgba(172, 255, 47, 0.803);
+    height: 3px;
+    width: auto+10px;
+    align-items: flex-start;
+    border: 5px;
+    margin-top: 0px;
+    border-color: #000;
+    justify-content: space-between;
+    border-radius: 15px;
+
+}
+/*ul:hover{
+    li a{
+        transform: scale(1.5);
+        //opacity: .6;
+        filter: blur(5px);
+        img{
+            position: static;
+        }
+}
+}*/
+header ul li a:hover{
+    background: rgba(186, 210, 4, 0.513);
+    color: rgb(0, 8, 255);
+    height: 60px;
+    transform: scale(1.1);
+    opacity: .9;
+    filter: blur(0px);
+
+}
+
+//seccion de CONTENIDO
+
+
+.container{
+    margin: 0 40px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1{
+        color: rgb(18, 13, 13);
+    }
+    .tab{
+        position: relative;
+        background: rgba(222, 252, 192, 0.911);
+        padding: 0 20px 20px;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+        border-radius: 5px;
+        overflow: hidden;
+         input{
+            appearance: none;
+            &:checked{
+                ~{
+                    label{
+                        &::after{
+                            content: "+";
+                            color: rgb(57, 45, 226);
+                            transform: rotate(135deg);
+                        }
+                        h2{
+                           position: absolute; 
+                           top: 0;
+                           left: 0;
+                           width: 100%;
+                           height: 100%;
+                           color: rgba(255, 255, 255, 0.2);
+                           font-size: 8em;
+                           justify-content: flex-end;
+                           padding: 20px;
+                        }
+                        h3{
+                            background: #fff;
+                            padding: 2px 10px;
+                            color: #333;
+                            border-radius: 5px;
+                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            -ms-border-radius: 5px;
+                            -o-border-radius: 5px;
+                        }                           
+                    }
+                    .content{
+                        max-height: 100vh;
+                        transition: 1s;
+                        p{
+                            color: #fff;
+                        }
+                    }                    
+                }
+            }
+
+         }
+         label{
+            display: inline-block;
+            display: flex;
+            margin-bottom: 0px;
+            align-items: center;
+            cursor: pointer;
+            &::after{
+                content: "+";
+                position: absolute;
+                right: 20px;
+                font-size: 2em;
+                color: rgba(0,0,0,0.5);
+                transition: transform 1s;
+            }
+            h2{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1,25em;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+            h3{
+                position: relative;
+                font-weight: 500;
+                color: #333;
+                z-index: 10;
+            }
+         }
+         &:hover{
+            label{
+                &::after{
+                    color: rgb(10, 9, 9);
+                }
+            }
+            
+         }
+         .content{
+           max-height: 0;
+           overflow: hidden;
+           transition: 0.5s;
+           p{
+            position: relative;
+            padding: 10px 0;
+            columns: #333;
+            z-index: 10;
+           } 
+         }
+         &:nth-child(1)
+         label{
+            h1{
+                color: black;
+            }
+         }
+         &:nth-child(2)
+         label{
+            h2{
+                background: linear-gradient( 135deg,#7deb8a 10%, #38ee06 100%);
+            }
+         }
+         &:nth-child(3)
+         label{
+            h2{
+                background: linear-gradient(135deg, #3c61e7 10%, #00eaff 100%);
+            }
+         }
+         &:nth-child(4)
+         label{
+            h2{
+                background: linear-gradient(135deg, #f86cbc 10%, #b6069cd1 100%);
+            }
+         }
+         &:nth-child(5)
+         label{
+            h2{
+                background: linear-gradient(135deg, #fa5300 10%, #ffc600 100%);
+            }
+         }
+    }
+}
+form {
+    
+button{
+    background: #38ee06;
+    display: flex;
+    align-items: right;
+    bottom: 0;
+}}
